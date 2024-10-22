@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling</title>
+    <style>
+        /* Container styles */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        /* Form element styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input, select {
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Polling</h1>
+    <div class="container">
+        <form action="AcknowledgeForm.jsp" method="post">
+            <label for="voter_name">NAME:</label>
+            <input type="text" id="voter_name" name="voter_name" required><br><br>
+
+            <label for="voter_id">Voter ID:</label>
+            <input type="text" id="voter_id" name="voter_id" required><br><br>
+
+            <label for="electoral_district">Electoral District:</label>
+            <input type="text" id="electoral_district" name="electoral_district" required><br><br>
+
+            <label for="candidate_id">Candidate:</label>
+            <select id="candidate_id" name="candidate_id" required>
+                <option value="">Select a candidate</option>
+                <option value="1">Prathosh (DMK)</option>
+                <option value="2">Natrajan (AIADMK)</option>
+                <option value="3">Suresh Kumar (BJP)</option>
+                <option value="4">Krishnamurthy (SELF)</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
+
